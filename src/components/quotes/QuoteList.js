@@ -27,7 +27,7 @@ const QuoteList = (props) => {
   const changeSortingHandler = () => {
     history.push({
       pathname: location.pathname,
-      search: `?sort=${isSortingAscending ? 'desc' : 'asc'}`,
+      search: `?sort=${(isSortingAscending ? 'desc' : 'asc')}`
     });
   };
 
@@ -35,7 +35,7 @@ const QuoteList = (props) => {
     <Fragment>
       <div className={classes.sorting}>
         <button onClick={changeSortingHandler}>
-          Sort {isSortingAscending ? 'Descedning' : 'Ascending'}
+          Sort {isSortingAscending ? 'Descending' : 'Ascending'}
         </button>
       </div>
       <ul className={classes.list}>
